@@ -1,0 +1,18 @@
+public class BriRotate{
+
+	static String rotate(String word, int input){
+		String answer = word.substring(word.length() - input) + word.substring(0, word.length() - input); // reading entire word and removing letters based on user input
+		return answer;
+	}
+
+	public static void main(String []args){
+		String userWord = "Instagram";
+		int userInput = 3;
+
+		//System.out.println(userWord.substring(userWord.length() - userInput)); //part thats being rotated
+		//System.out.println(userWord.substring(0, userWord.length() - userInput)); //beginning of the word
+
+		String rotatedWord = rotate(userWord, userInput);
+		System.out.println(rotatedWord);
+	}
+}
