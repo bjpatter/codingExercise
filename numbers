@@ -1,0 +1,30 @@
+public class BriNumbers{
+	static int basicArray[] = new int[] {1,5,2,1,10};
+	static int lessThan = 0; //holds number of values less than the input
+	static int greaterThan = 0; //holds number of values greater than the input
+
+	public static void testBri(int userInput) {
+
+		for(int i = 0; i<basicArray.length; i++) {
+			if(basicArray[i]<userInput) {
+				lessThan++; //increase count if less than user input
+			}
+			else if(basicArray[i]>userInput) {
+				greaterThan++; //increase count if greater than user input
+			}	
+
+			else{
+				//do nothing
+			}		
+		}
+		System.out.println("Amount of values above number " + userInput + " input:" + greaterThan);
+		System.out.println("Amount of values below number " + userInput + " input:" + lessThan);
+}
+
+	public static void main(String []args){
+		//testBri(0);
+		testBri(6);
+		//testBri(10);
+		//testBri(25);
+	}
+}
